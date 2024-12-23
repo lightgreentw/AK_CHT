@@ -125,4 +125,4 @@ ENGFont=font_a16.dat
 
 # 特別感謝
 * 「創世紀Ultima聖者旅店」社團 https://www.facebook.com/groups/215077769799618
-* 電玩徐社長、劉建輔、Mett Lin、葉俊宏 給予許多寶貴意見
+* 電玩徐社長、劉建輔、Mett Lin、葉俊宏 協助測試並給予許多寶貴意見
