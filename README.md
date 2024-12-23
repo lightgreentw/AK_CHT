@@ -98,13 +98,13 @@ ENGFont=font_a16.dat
 
 
 # Reference
-Akalabeth: World of Doom created by Richard Garriot (Lord British) 
-QuickBASIC is copyright by Microsoft https://zh.wikipedia.org/zh-tw/QuickBASIC 
-GW-BASIC by Microsoft under MIT license https://zh.wikipedia.org/zh-tw/GW-BASIC 
-QB64 is cross-platform compiler https://qb64.com or https://www.qb64phoenix.com/ 
-阿卡拉貝GW-BASIC版本 https://nanochess.org/akalabeth.html 
-阿卡拉貝程式碼解析 https://jtauber.github.io/game-hacking/akalabeth/main_game.html 
-AppleBASIC參考 https://www.landsnail.com/a2ref.htm 
-QuickBASIC參考 https://www.pcjs.org/documents/books/mspl13/basic/qblang/ 
-BDF檔參考 https://en.wikipedia.org/wiki/Glyph_Bitmap_Distribution_Format 
-字體研究參考 https://github.com/champyen/sango2_tc_patch 
+* Akalabeth: World of Doom created by Richard Garriot (Lord British) 
+* QuickBASIC is copyright by Microsoft https://zh.wikipedia.org/zh-tw/QuickBASIC 
+* GW-BASIC by Microsoft under MIT license https://zh.wikipedia.org/zh-tw/GW-BASIC 
+* QB64 is cross-platform compiler https://qb64.com or https://www.qb64phoenix.com/ 
+* 阿卡拉貝GW-BASIC版本 https://nanochess.org/akalabeth.html 
+* 阿卡拉貝程式碼解析 https://jtauber.github.io/game-hacking/akalabeth/main_game.html 
+* AppleBASIC參考 https://www.landsnail.com/a2ref.htm 
+* QuickBASIC參考 https://www.pcjs.org/documents/books/mspl13/basic/qblang/ 
+* BDF檔參考 https://en.wikipedia.org/wiki/Glyph_Bitmap_Distribution_Format 
+* 字體研究參考 https://github.com/champyen/sango2_tc_patch 
