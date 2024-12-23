@@ -3,7 +3,7 @@
 </p>
 
 # Back to the 1979!
-創世紀之父理察蓋瑞特(Richard Garriott)的開山之作 - Akalabeth，無疑是電子遊戲創作標竿，CRPG、迷宮探索(Dungeon Crawl)、Rogue-Like、第一人稱視角遊戲(First-person game)甚至3D建模、即時運算，現代熟知的架構在那時候就已經成形。所以熱愛遊戲、熱愛舊遊戲、熱愛創世紀的大家怎麼能不愛這款經典作品。 
+創世紀之父理察蓋瑞特(Richard Garriott)的開山之作 - Akalabeth: World of Doom(阿卡拉貝: 末日之境)，無疑是電子遊戲創作標竿，CRPG、迷宮探索(Dungeon Crawl)、Rogue-Like、第一人稱視角遊戲(First-person game)甚至3D建模、即時運算，現代熟知的架構在那時候就已經成形。所以熱愛遊戲、熱愛舊遊戲、熱愛創世紀的大家怎麼錯過這款經典作品。 
 
 # 中文化阿卡拉貝
 某日瀏覽網站時逛到 [Akalabeth: porting from AppleSoft BASIC to GW-Basic](https://nanochess.org/akalabeth.html) 驚見網路同好將原本Akalabeth的AppleBASIC原始碼翻譯成GW-Basic版本，搜尋一下曾經Origin的官方網站有公佈過原始碼，所以後續能被眾多同好延伸各種版本，當下就覺得曾經熟悉的程式語言如果沒有拿來利用，尤其是沒有翻譯成中文版本真的是太可惜了！！  
@@ -122,3 +122,7 @@ ENGFont=font_a16.dat
 * QuickBASIC參考 https://www.pcjs.org/documents/books/mspl13/basic/qblang/ 
 * BDF檔參考 https://en.wikipedia.org/wiki/Glyph_Bitmap_Distribution_Format 
 * 字體研究參考 https://github.com/champyen/sango2_tc_patch 
+
+# 特別感謝
+* 「創世紀Ultima聖者旅店」社團 https://www.facebook.com/groups/215077769799618
+* 電玩徐社長、劉建輔、Mett Lin、葉俊宏 給予許多寶貴意見
