@@ -1,5 +1,7 @@
 <p align = "center">
 <img src="https://github.com/lightgreentw/AK_CHT/blob/main/readmePIC00.png" width=80%>
+<br/>
+<small>阿卡拉貝也算某種程度致敬魔戒，所以放個精靈注音文回敬一下</small>
 </p>
 
 # Back to the 1979!
@@ -10,6 +12,8 @@
 片頭的畫面靈感來自Vectrex版開頭向量圖，那時候看到就很想自己做一個，沒想到現在就用上了，原始Apple II版的片頭是一個圖片檔，於是利用那張圖片用Basic的繪圖函數臨摹了一張，算是將遊戲裡外的風格都一致了。
 <p align = "center">
 <img src="https://github.com/lightgreentw/AK_CHT/blob/main/readmePIC01.gif" width=60%>
+<br/>
+<small>像玩連連看一樣連出來的向量圖卻比寫程式花更長時間</small>
 </p>
 
 ## 重新接觸QuickBasic
@@ -20,7 +24,9 @@
 ## 點陣中文
 第一個頭痛點就是中文字型檔，倚天中文字型並不是無償使用的，而以前留的QB書籍都是以倚天字型檔做範本，所以必須另尋他路。就算是這個年代人類對點陣字仍然有一定程度的依賴，但不得不說也許是向量字的發達，正體中文點陣字的資源很有限，一直深挖下去，被我找到了BDF/PCF這種在Unix / Linux上 X Window使用的點陣字格式，於是在Linux裡挖到了公眾版本的中文點陣字型檔，順手寫了一個簡易的轉檔工具轉成自己可以用的字型檔。雖然後來才又發現文泉驛有更完整的BDF資源，但我想復古到底，連中文字都想用古早味的字型。
 <p align = "center">
-<img src="https://github.com/lightgreentw/AK_CHT/blob/main/readmePIC03.png" width=60%>
+<img src="https://github.com/lightgreentw/AK_CHT/blob/main/readmePIC02.png" border="1" width=60%>
+<br/>
+<small>原本佔滿全螢幕的文字因為解析度的關係只能選擇置中</small>
 </p>
 
 ## 自訂函數
@@ -70,10 +76,13 @@ LangRes$ (langIndex As String)
 ## 遊戲操作
 為了維持原始遊戲味道，除了提高解析度及為了顯示中文而變更字詞和程式
 順序外，其他顯示圖形、遊戲流程等程式碼及參數都與原來一樣沒有變動。但是又為了幫助沒有接觸過阿卡拉貝的朋友們能簡單上手，我增加了很多提示字詞，例如在商店中購買物品時，原文版本的物品都是以英文單字呈現，所以購買時只要按下物品單字的字頭就能採購，但中文的部份就必須在物品中文名稱前面加上提示按鈕字母；又如，在下達\<A>攻擊指令時，原程式就只有丟一句「WHICH WEAPON」，就等待玩家下達接下來的指令，一開始確實有點摸不太著頭緒，後來摸索一陣子才知道是要按最初在商店中購買武器時候所按的武器字頭，於是我就加上了提示訊息「使用武器 \<R>長劍 \<A>斧頭 \<S>盾牌 \<B>弓箭 \<M>護身符」。  
-再來，我有在Youtube上看過其他版本裡的地下城出現指南針，於是我也在中文版中時做了方位辨識及樓層提示。最後我還有把連1998的DOS版本都沒有的APPLE II版本遊戲大綱及線上操作說明直接搬過來，更能完整表達遊戲，以期待以上一些提昇操作方便的小小功能讓更多人能接受。
+再來，在Youtube上看過其他版本裡的地下城出現指南針，於是也在中文版中實做了方位辨識及樓層提示。最後還有把連1998的DOS版本都沒有的APPLE II版本遊戲大綱及線上操作說明直接搬過來，更能完整表達遊戲，以期待以上一些提昇操作方便的小小功能讓更多人能接受。
 <p align = "center">
-<img src="https://github.com/lightgreentw/AK_CHT/blob/main/readmePIC02.png" width=60%>
+<img src="https://github.com/lightgreentw/AK_CHT/blob/main/readmePIC03.png" width=60%>
+<br/>
+<small>保留單色的復古情懷</small>
 </p>
+
 
 |鍵盤按鈕     |戶外               |地下城             |
 |:---------:|:-----------------:|:----------------:|
@@ -84,7 +93,12 @@ LangRes$ (langIndex As String)
 |空白鍵      |PASS               |PASS              |
 |P          |僅保留無實際用途      | 僅保留實際無用     |
 
-**還有一個很重要的提醒，遊戲開始一定要先找Lord British的宮殿，才會有任務提示。
+
+<p align = "center">
+<img src="https://github.com/lightgreentw/AK_CHT/blob/main/readmePIC04.png" width=60%>
+<br/>
+<small>遊戲開始很重要的提醒，一定要先找Lord British的宮殿，才會有任務提示</small>
+</p>
 
 ## 程式參數
 由於使用了QB64這個超強大的編譯器，連螢幕顯示方式都處理好了，故參數以INI的方式設定。
