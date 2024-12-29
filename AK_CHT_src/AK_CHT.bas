@@ -1,7 +1,6 @@
-_Title "Akalabeth T-Chinese Edition v0.5"
-$ExeIcon:'.\ak_cht.ico'
+_Title "Akalabeth T-Chinese Edition v0.5.1"
+$ExeIcon:'.\ak_cht_256.ico'
 _Icon
-
 
 Const screenWidth = 640
 Const screenHeight = 480
@@ -196,6 +195,19 @@ End If
 249 If ce = 5 And di > 0 Then View Print: SetScrollBlock 3, 1, 30, 1, 80: LocateC 3, 1, tb: SetColor 3, 15, 0: PrintC 3, LangRes$("249_1"), 0: tb = tb + 8
 250 If di > 0 And ce = 5 Then Line (139 - 10 / di, pe%(di, 3) - 10 / di)-(139 - 5 / di, pe%(di, 3) - 15 / di): Line -(139 + 15 / di, pe%(di, 3) - 15 / di): Line -(139 + 15 / di, pe%(di, 3) - 5 / di): Line -(139 + 10 / di, pe%(di, 3))
 252 If di > 0 And ce = 5 Then Line (139 + 10 / di, pe%(di, 3) - 10 / di)-(139 + 15 / di, pe%(di, 3) - 15 / di)
+If in > 0 Then
+    'Compass
+    If dx = 1 And dy = 0 Then
+        ScaleText 252, 164, LangRes$("252_1"), 15, 0, 1
+    ElseIf dx = 0 And dy = 1 Then
+        ScaleText 252, 164, LangRes$("252_2"), 15, 0, 1
+    ElseIf dx = 0 And dy = -1 Then
+        ScaleText 252, 164, LangRes$("252_3"), 15, 0, 1
+    ElseIf dx = -1 And dy = 0 Then
+        ScaleText 252, 164, LangRes$("252_4"), 15, 0, 1
+    End If
+End If
+
 260 If mc < 1 Then 490
 265 b = 79 + yy%(di): C = 139
 266 If mc = 8 Then View Print: SetScrollBlock 3, 1, 30, 1, 80: LocateC 3, 1, tb: SetColor 3, 15, 0: PrintC 3, LangRes$("266_1"), 0: tb = tb + 8: PrintC 3, "", -1: GoTo 269: Rem call
@@ -342,16 +354,6 @@ SetScrollBlock 2, 25, 30, 60, 80: LocateC 2, 25, 1
 1091 SetColor 2, 15, 0: For jj = 0 To 2: LocateC 2, 25 + jj, 1: PrintC 2, Space$(19), 0: Next: LocateC 2, 25, 1: PrintC 2, LangRes$("1091_1"), 0: PrintC 2, LTrim$(Str$(pw(0))), 0: LocateC 2, 26, 1: PrintC 2, LangRes$("1091_2"), 0: PrintC 2, LTrim$(Str$(c(0))), 0: LocateC 2, 27, 1: PrintC 2, LangRes$("1091_3"), 0: PrintC 2, LTrim$(Str$(c(5))), 0: Rem call -868
 SetColor 2, 0, 15: LocateC 2, 29, 1: PrintC 2, LangRes$("1091_5"), -1: LocateC 2, 30, 1: PrintC 2, LangRes$("1091_6"), 0
 If in > 0 Then
-    If dx = 1 And dy = 0 Then
-        ScaleText 570, 390, LangRes$("1091_7"), 15, 0, 3
-    ElseIf dx = 0 And dy = 1 Then
-        ScaleText 570, 390, LangRes$("1091_8"), 15, 0, 3
-    ElseIf dx = 0 And dy = -1 Then
-        ScaleText 570, 390, LangRes$("1091_9"), 15, 0, 3
-    ElseIf dx = -1 And dy = 0 Then
-        ScaleText 570, 390, LangRes$("1091_10"), 15, 0, 3
-    End If
-
     LocateC 2, 28, 1: PrintC 2, LangRes$("1091_4"), 0: PrintC 2, LTrim$(Str$(in)), -1
 End If
 
@@ -361,16 +363,6 @@ End If
 1096 SetColor 2, 15, 0: For jj = 0 To 3: LocateC 2, 25 + jj, 1: PrintC 2, Space$(19), 0: Next: LocateC 2, 25, 1: PrintC 2, LangRes$("1096_1"), 0: PrintC 2, LTrim$(Str$(pw(0))), 0: LocateC 2, 26, 1: PrintC 2, LangRes$("1096_2"), 0: PrintC 2, LTrim$(Str$(c(0))), 0: LocateC 2, 27, 1: PrintC 2, LangRes$("1096_3"), 0: PrintC 2, LTrim$(Str$(c(5))), 0
 SetColor 2, 0, 15: LocateC 2, 29, 1: PrintC 2, LangRes$("1096_5"), -1: LocateC 2, 30, 1: PrintC 2, LangRes$("1096_6"), 0
 If in > 0 Then
-    If dx = 1 And dy = 0 Then
-        ScaleText 570, 390, LangRes$("1096_7"), 15, 0, 3
-    ElseIf dx = 0 And dy = 1 Then
-        ScaleText 570, 390, LangRes$("1096_8"), 15, 0, 3
-    ElseIf dx = 0 And dy = -1 Then
-        ScaleText 570, 390, LangRes$("1096_9"), 15, 0, 3
-    ElseIf dx = -1 And dy = 0 Then
-        ScaleText 570, 390, LangRes$("1096_10"), 15, 0, 3
-    End If
-
     LocateC 2, 28, 1: PrintC 2, LangRes$("1091_4"), 0: PrintC 2, LTrim$(Str$(in)), -1
 End If
 
@@ -521,7 +513,7 @@ If q$ <> "Y" Then PrintC 0, "", -1: PrintC 0, LangRes$("7040_2"), -1: pn$ = "": 
 7510 PrintC 0, "", -1: PrintC 0, "", -1: PrintC 0, "", -1: PrintC 0, LangRes$("7510_1"), 0: PrintC 0, pn$, -1: PrintC 0, "", -1: PrintC 0, LangRes$("7510_2"), -1: If Abs(ta) = 10 Then 7900
 7520 PrintC 0, LangRes$("7520_1"), -1: PrintC 0, LangRes$("7520_2"), -1: ta = Abs(ta) + 1: PrintC 0, "", -1: PrintC 0, LangRes$("7520_3"), 0: PrintC 0, m$(ta), -1
 7530 GoTo 7060
-7900 Screen 12: View Print: SetScrollBlock 0, 1, 30, 20, 60: Cls: Print: Print: Print: pn$ = LangRes$("7900_1") + pn$: Print " "; pn$; ","
+7900 Screen 12: View Print: SetScrollBlock 0, 1, 30, 20, 60: Cls: LocateC 0, 1, 1: PrintC 0, "", -1: PrintC 0, "", -1: PrintC 0, "", -1: pn$ = LangRes$("7900_1") + pn$: PrintC 0, " " + pn$ + ",", -1
 7910 PrintC 0, LangRes$("7910_1"), -1: PrintC 0, LangRes$("7910_2"), -1: PrintC 0, LangRes$("7910_3"), -1: PrintC 0, LangRes$("7910_4"), -1
 7920 If lp = 10 Then 7950
 7930 PrintC 0, "", -1: PrintC 0, LangRes$("7930_1"), -1: PrintC 0, LangRes$("7930_2"), 0: PrintC 0, Str$(lp + 1), -1
@@ -1017,65 +1009,65 @@ Sub TitleScreen ()
     Line (416, 409)-(418, 411), 15
 
     '----------------------------
-    Line (150, 410)-(180, 380), 8
-    Line (180, 380)-(185, 370), 8
-    Line (185, 370)-(190, 370), 8
-    Line (190, 370)-(195, 360), 8
-    Line (195, 360)-(205, 350), 8
-    Line (205, 350)-(205, 335), 8
-    Line (205, 335)-(210, 330), 8
-    Line (210, 330)-(205, 325), 8
-    Line (205, 325)-(205, 310), 8
-    Line (205, 310)-(215, 290), 8
-    Line (215, 290)-(220, 270), 8
-    Line (220, 270)-(230, 250), 8
-    Line (230, 250)-(240, 230), 8
-    Line (240, 230)-(260, 210), 8
-    Line (260, 210)-(270, 250), 8
-    Line (270, 250)-(275, 225), 8
-    Line (270, 205)-(280, 230), 8
-    Line (280, 230)-(290, 190), 8
-    Line (290, 190)-(330, 180), 8
-    Line (330, 180)-(337, 210), 8
-    Line (337, 210)-(350, 180), 8
-    Line (350, 180)-(360, 180), 8
-    Line (360, 180)-(380, 190), 8
-    Line (380, 190)-(385, 250), 8
-    Line (385, 250)-(400, 205), 8
-    Line (400, 205)-(410, 220), 8
-    Line (410, 220)-(420, 230), 8
-    Line (420, 230)-(420, 260), 8
-    Line (420, 260)-(410, 280), 8
-    Line (410, 280)-(430, 340), 8
-    Line (430, 340)-(448, 380), 8
-    Line (448, 380)-(450, 400), 8
-    Line (450, 400)-(500, 420), 8
+    Line (150, 410)-(180, 380), 7
+    Line (180, 380)-(185, 370), 7
+    Line (185, 370)-(190, 370), 7
+    Line (190, 370)-(195, 360), 7
+    Line (195, 360)-(205, 350), 7
+    Line (205, 350)-(205, 335), 7
+    Line (205, 335)-(210, 330), 7
+    Line (210, 330)-(205, 325), 7
+    Line (205, 325)-(205, 310), 7
+    Line (205, 310)-(215, 290), 7
+    Line (215, 290)-(220, 270), 7
+    Line (220, 270)-(230, 250), 7
+    Line (230, 250)-(240, 230), 7
+    Line (240, 230)-(260, 210), 7
+    Line (260, 210)-(270, 250), 7
+    Line (270, 250)-(275, 225), 7
+    Line (270, 205)-(280, 230), 7
+    Line (280, 230)-(290, 190), 7
+    Line (290, 190)-(330, 180), 7
+    Line (330, 180)-(337, 210), 7
+    Line (337, 210)-(350, 180), 7
+    Line (350, 180)-(360, 180), 7
+    Line (360, 180)-(380, 190), 7
+    Line (380, 190)-(385, 250), 7
+    Line (385, 250)-(400, 205), 7
+    Line (400, 205)-(410, 220), 7
+    Line (410, 220)-(420, 230), 7
+    Line (420, 230)-(420, 260), 7
+    Line (420, 260)-(410, 280), 7
+    Line (410, 280)-(430, 340), 7
+    Line (430, 340)-(448, 380), 7
+    Line (448, 380)-(450, 400), 7
+    Line (450, 400)-(500, 420), 7
 
-    Line (195, 360)-(180, 330), 8
-    Line (180, 330)-(190, 310), 8
-    Line (190, 310)-(200, 270), 8
-    Line (200, 270)-(220, 250), 8
-    Line (220, 250)-(220, 240), 8
-    Line (220, 240)-(230, 230), 8
-    Line (230, 230)-(250, 200), 8
-    Line (250, 200)-(260, 200), 8
-    Line (260, 200)-(280, 187), 8
-    Line (280, 187)-(290, 180), 8
-    Line (290, 180)-(300, 165), 8
-    Line (300, 165)-(320, 160), 8
-    Line (320, 160)-(345, 170), 8
-    Line (345, 170)-(360, 170), 8
-    Line (360, 170)-(380, 180), 8
-    Line (380, 180)-(390, 180), 8
-    Line (390, 180)-(410, 190), 8
-    Line (410, 190)-(420, 220), 8
-    Line (420, 220)-(425, 225), 8
-    Line (425, 225)-(430, 260), 8
-    Line (430, 260)-(440, 280), 8
-    Line (440, 280)-(430, 290), 8
-    Line (430, 290)-(431, 305), 8
-    Line (431, 305)-(445, 325), 8
-    Line (445, 325)-(432, 345), 8
+    Line (195, 360)-(180, 330), 7
+    Line (180, 330)-(190, 310), 7
+    Line (190, 310)-(200, 270), 7
+    Line (200, 270)-(220, 250), 7
+    Line (220, 250)-(220, 240), 7
+    Line (220, 240)-(230, 230), 7
+    Line (230, 230)-(250, 200), 7
+    Line (250, 200)-(260, 200), 7
+    Line (260, 200)-(280, 187), 7
+    Line (280, 187)-(290, 180), 7
+    Line (290, 180)-(300, 165), 7
+    Line (300, 165)-(320, 160), 7
+    Line (320, 160)-(345, 170), 7
+    Line (345, 170)-(360, 170), 7
+    Line (360, 170)-(380, 180), 7
+    Line (380, 180)-(390, 180), 7
+    Line (390, 180)-(410, 190), 7
+    Line (410, 190)-(420, 220), 7
+    Line (420, 220)-(425, 225), 7
+    Line (425, 225)-(430, 260), 7
+    Line (430, 260)-(440, 280), 7
+    Line (440, 280)-(430, 290), 7
+    Line (430, 290)-(431, 305), 7
+    Line (431, 305)-(445, 325), 7
+    Line (445, 325)-(432, 345), 7
 
     '-----------------------------
 
@@ -1175,8 +1167,8 @@ Sub TitleScreen ()
     Circle (203, 383), 5, 2, .4, 5
     Circle (218, 385), 5, 2, 4.6, 2.6
 
-    ScaleText 100, 50, LangRes$("TITLE_1"), 11, -1, 3
-    ScaleText 450, 110, LangRes$("TITLE_2"), 3, -1, 2
+    ScaleText 100, 50, LangRes$("TITLE_1"), 15, -1, 3
+    ScaleText 450, 110, LangRes$("TITLE_2"), 7, -1, 2
 
     ScaleText 40, 300, LangRes$("TITLE_3"), 6, -1, 2
     ScaleText 10, 350, LangRes$("TITLE_4"), 6, -1, 2
@@ -1184,8 +1176,8 @@ Sub TitleScreen ()
     ScaleText 480, 300, LangRes$("TITLE_5"), 6, -1, 2
     ScaleText 480, 350, LangRes$("TITLE_6"), 6, -1, 2
 
-    ScaleText 80, 450, LangRes$("TITLE_7"), 14, -1, 1
-    ScaleText 300, 450, LangRes$("TITLE_8"), 14, -1, 1
+    ScaleText 50, 450, LangRes$("TITLE_7"), 15, -1, 1
+    ScaleText 270, 450, LangRes$("TITLE_8"), 15, -1, 1
 
     startTime = Timer
 
@@ -1308,6 +1300,10 @@ Function LangRes$ (langIndex As String)
         Case "35_1": LangRes$ = "  (請耐心等候)" '"  (PLEASE WAIT)"
         Case "42_1": LangRes$ = "開始冒險 (方向鍵 ↑/↓/←/→)" '""
         Case "249_1": LangRes$ = "寶箱！" '"CHEST! "
+        Case "252_1": LangRes$ = "北" '""
+        Case "252_2": LangRes$ = "東" '""
+        Case "252_3": LangRes$ = "西" '""
+        Case "252_4": LangRes$ = "南" '""
         Case "266_1": LangRes$ = "寶箱！" '"CHEST! "
         Case "1000_1": LangRes$ = "指令？                      " '"COMMAND?                    "
         Case "1081_1": LangRes$ = "PASS" '"PASS"
@@ -1321,20 +1317,12 @@ Function LangRes$ (langIndex As String)
         Case "1091_4": LangRes$ = "樓層=" '"LEVEL="
         Case "1091_5": LangRes$ = "S-狀態 A-攻擊 P-暫停" '""
         Case "1091_6": LangRes$ = "X-進入 /攀上 /爬下  " '""
-        Case "1091_7": LangRes$ = "北" '""
-        Case "1091_8": LangRes$ = "東" '""
-        Case "1091_9": LangRes$ = "西" '""
-        Case "1091_10": LangRes$ = "南" '""
         Case "1096_1": LangRes$ = "食物=" '"FOOD="
         Case "1096_2": LangRes$ = "生命=" '"H.P.="
         Case "1096_3": LangRes$ = "金幣=" '"GOLD="
         Case "1096_4": LangRes$ = "樓層=" '"LEVEL="
         Case "1096_5": LangRes$ = "S-狀態 A-攻擊 P-暫停" '""
         Case "1096_6": LangRes$ = "X-進入 /攀上 /爬下  " '""
-        Case "1096_7": LangRes$ = "北" '""
-        Case "1096_8": LangRes$ = "東" '""
-        Case "1096_9": LangRes$ = "西" '""
-        Case "1096_10": LangRes$ = "南" '""
         Case "1100_1": LangRes$ = "向北" '"NORTH"
         Case "1100_2": LangRes$ = "無法越過此山脈" '"YOU CAN'T PASS THE MOUNTAINS"
         Case "1155_1": LangRes$ = "前進" '"FORWARD"
@@ -1442,7 +1430,7 @@ Function LangRes$ (langIndex As String)
         Case "7520_1": LangRes$ = "可惜的是，此成就尚不足以令汝" '"UNFORTUNATELY, THIS IS NOT ENOUGH TO"
         Case "7520_2": LangRes$ = "晉爵騎士！" '"BECOME A KNIGHT."
         Case "7520_3": LangRes$ = "汝之使命必須斬殺 " '"NOW THOU MUST KILL A(N) "
-        Case "7900_1": LangRes$ = "LORD" '"LORD "
+        Case "7900_1": LangRes$ = "LORD " '"LORD "
         Case "7910_1": LangRes$ = "       您已證明自身配得上騎士之榮譽！" '"       THOU HAST PROVED THYSELF WORTHY"
         Case "7910_2": LangRes$ = "若願，仍可繼續此遊戲探尋更多奇遇" '"OF KNIGHTHOOD, CONTINUE PLAY IF THOU"
         Case "7910_3": LangRes$ = "然汝之成就成實為不凡" '"DOTH WISH, BUT THOU HAST ACOMPLISHED"
@@ -1510,8 +1498,8 @@ Function LangRes$ (langIndex As String)
         Case "TITLE_4": LangRes$ = "愚昧的凡人" '"Foolis mortal,"
         Case "TITLE_5": LangRes$ = "膽敢擅闖" '"You trespass in"
         Case "TITLE_6": LangRes$ = "末日之境" '"Akalabeth! World of Doom!!"
-        Case "TITLE_7": LangRes$ = "REMADE BY INDIANA CHIOU" '
-        Case "TITLE_8": LangRes$ = "ORIGINAL(1979) BY LORD BRITISH" '
+        Case "TITLE_7": LangRes$ = "BY LORD BRITISH, 1979" '
+        Case "TITLE_8": LangRes$ = "CHINESE LOCALIZED BY INDIANA CHIOU, 2024" '
         Case "TITLE_9": LangRes$ = "遊戲指引及說明 (Y/N)" '"Instructions (Y/N)"
         Case "INSTR_1": LangRes$ = "- 城鎮" '
         Case "INSTR_2": LangRes$ = "這裡是冒險者的補給站" '
